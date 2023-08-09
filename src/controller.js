@@ -13,14 +13,13 @@ router.get('/users', async (req, res) => {
 })
 
 router.post('/addUsers', async (req, res) => {
-    const user =
-        await service.addUsers(req.body)
-            // .then(
-            // )
-            .catch(
-                res.status(400).json('Could not add user')
-            )
-    res.status(200).json('User added successfully'+ user)
+    try {
+        const user = await service.addUsers(req.body);
+        res.status(200).json('User added successfully' + user);
+    } catch (error) {
+        console.error(error);
+        res.status(400).json('Could not add user');
+    }
 })
 
 
