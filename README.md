@@ -1,6 +1,15 @@
 # NotaryApp
 
-NotaryApp is a Node.js API project that provides functionality to track candidate statuses created by users.
+NotaryApp is a Node.js API project that provides functionality to track candidate statuses created by users. The required API for the assignment is getStatusCount
+1. Required API
+   ```bash
+   http://localhost:5000/api/getStatusCount
+2. controller => src\controller.js
+    ```bash
+    router.post('/getStatusCount')
+3. service => src\service.js
+    ```bash
+   getStatusCount{}
 
 ## Table of Contents
 - [Overview](#overview)
@@ -9,6 +18,7 @@ NotaryApp is a Node.js API project that provides functionality to track candidat
   - [Installation](#installation)
   - [Running the App](#running-the-app)
 - [API Documentation](#api-documentation)
+- [ER Diagram](#er-diagram)
 
 ## Overview
 
@@ -45,3 +55,7 @@ This will start the server on port 5000.
 
 ### API Documentation
 API documentation is provided in the thunder-collection_NotaryApp.json file. It outlines all available endpoints, request formats, and response structures.
+
+### ER Diagram
+SQL based Modelling and connecting flow diagram is in ER diagram.mwb file.
+
